@@ -158,7 +158,7 @@ iinanima SuffMood ;
 amírumára SuffMood ;
 itu'a SuffMood ;
 
-LEXICON TVs! These are most of the TVs I have recorded in FLEX
+LEXICON TVs ! These are most of the TVs I have recorded in FLEX
 ni'a  SuffMood ;
 'utara'a SuffMood ;
 'upɨ́ɨ́ SuffMood ;
@@ -308,7 +308,6 @@ LEXICON Suffixes
 -2sg.obj:pi # ;
 -3sg.obj.m:ri # ;
 -3sg.obj.f:ru # ;
-                # ;
 
 ! The verb classes are almost working. The prefixes are working, but how do I get TVs to continue past Tense but not the three IV classes? acutally the stative verbs aren't correct either since they only take suffixes and not prefixes
 ! There are also a lot of ther inflectional and derivational affixes

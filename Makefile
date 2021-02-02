@@ -5,36 +5,44 @@
 # If the dependencies or recipe need to take up more than one line, the line
 # must be continued using a backslash.
 
-all : lexicon_VINP.lexc \
-	gen_VINP.hfstol \
-	ana_VINP.hfstol \
-	ana_VINP.png \
-	lexicon_VINP.png
+all : lexicon.lexc \
+	phonA.twolc \
+	complete.hfst \
+	gen.hfstol \
+	ana.hfstol \
+	ana.png \
+	lexicon.png
 
-lexicon_VINP.lexc : InapariVerbs.lexc
-	cat InapariVerbs.lexc > lexicon_VINP.lexc
+lexicon.lexc : InapariVerbs.lexc
+	cat InapariVerbs.lexc > lexicon.lexc
 
-gen_VINP.hfst : lexicon_VINP.lexc
-	hfst-lexc <lexicon_VINP.lexc >gen_VINP.hfst
+phonA.twolc : phon.twolc
+	hfst-twolc phon.twolc > phon.hfst
 
-gen_VINP.hfstol : gen_VINP.hfst
-	hfst-fst2fst --optimized-lookup-unweighted -i gen_VINP.hfst -o gen_VINP.hfstol
+gen.hfst : lexicon.lexc
+	hfst-lexc < lexicon.lexc > gen.hfst
 
-ana_VINP.hfst : gen_VINP.hfst
-	hfst-invert -i gen_VINP.hfst -o ana_VINP.hfst
+complete.hfst : gen.hfst phon.hfst
+	hfst-compose-intersect -1 gen.hfst -2 phon.hfst > full.hfst
 
-ana_VINP.hfstol : ana_VINP.hfst
-	hfst-fst2fst --optimized-lookup-unweighted -i ana_VINP.hfst -o ana_VINP.hfstol
+gen.hfstol : full.hfst
+	hfst-fst2fst --optimized-lookup-unweighted -i full.hfst -o gen.hfstol
 
-ana_VINP.png : ana_VINP.hfst
-	hfst-fst2txt ana_VINP.hfst | python3 att2dot.py | dot -T png -o ana_VINP.png
+ana.hfst : full.hfst
+	hfst-invert -i full.hfst -o ana.hfst
 
-lexicon_VINP.png : lexicon_VINP.lexc
-	python3 lexc2dot.py <lexicon_VINP.lexc | dot -T png -o lexicon_VINP.png  # BUG
+ana.hfstol : ana.hfst
+	hfst-fst2fst --optimized-lookup-unweighted -i ana.hfst -o ana.hfstol
+
+ana.png : ana.hfstol
+	hfst-fst2txt ana.hfstol | python3 att2dot.py | dot -T png -o ana.png
+
+lexicon.png : lexicon.lexc
+	python3 lexc2dot.py < lexicon.lexc | dot -T png -o lexicon.png
 
 .PHONY : clean
 clean :
-	-rm *.hfst *.hfstol lexicon_VINP.lexc
+	-rm *.hfst *.hfstol lexicon.lexc *.png
 
 .PHONY : test
 test :
