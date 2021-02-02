@@ -15,7 +15,7 @@ LEXICON Root ! Polarity
 neg-:aa Verbclass ;
         Verbclass ;
 
-LEXICON Verbclass
+LEXICON Verbclass ! The two basic types of verbs prefixing and non-prefixing
         Prefixes ;
         SIV ;
         

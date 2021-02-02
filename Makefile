@@ -6,7 +6,7 @@
 # must be continued using a backslash.
 
 all : lexicon.lexc \
-	phon.twolc \
+	phon.hfst \
 	complete.hfst \
 	gen.hfstol \
 	ana.hfstol \
@@ -16,20 +16,20 @@ all : lexicon.lexc \
 lexicon.lexc : InapariVerbs.lexc
 	cat InapariVerbs.lexc > lexicon.lexc
 
-phon.twolc : phon.twolc
+phon.hfst : phon.twolc
 	hfst-twolc phon.twolc > phon.hfst
 
 gen.hfst : lexicon.lexc
 	hfst-lexc < lexicon.lexc > gen.hfst
 
 complete.hfst : gen.hfst phon.hfst
-	hfst-compose-intersect -1 gen.hfst -2 phon.hfst > full.hfst
+	hfst-compose-intersect -1 gen.hfst -2 phon.hfst > complete.hfst
 
-gen.hfstol : full.hfst
-	hfst-fst2fst --optimized-lookup-unweighted -i full.hfst -o gen.hfstol
+gen.hfstol : complete.hfst
+	hfst-fst2fst --optimized-lookup-unweighted -i complete.hfst -o gen.hfstol
 
-ana.hfst : full.hfst
-	hfst-invert -i full.hfst -o ana.hfst
+ana.hfst : complete.hfst
+	hfst-invert -i complete.hfst -o ana.hfst
 
 ana.hfstol : ana.hfst
 	hfst-fst2fst --optimized-lookup-unweighted -i ana.hfst -o ana.hfstol
