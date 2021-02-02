@@ -1,0 +1,300 @@
+!This is the FST for Iñapari verbs. This represents syntagmatic properties of word formation by dividing the syntagemes in blocks. The blocks
+!called LEXICON represent the paradigmatic elements. So you read it top to bottom left to right.
+!This file produce 22656 unique sentences in the language. 
+
+Multichar_Symbols
+1sg.subj- 2sg-subj- 3sg.subj.m- 3sg.subj.f- -nfut.ndef -nfut.def -fut.def -3sg.obj.m
+-3sg.obj.f -1sg.obj -2sg.obj -irr -real
+
+LEXICON Root
+neg-:aa Verbclass ;
+        Verbclass ;
+
+LEXICON Verbclass
+        Prefixes ;
+        SIV ;
+        
+LEXICON Prefixes 
+1sg.subj-:no Verbs ;
+2sg-subj-:pi Verbs ;
+3sg.subj.m-:ri Verbs ;
+3sg.subj.f-:ru Verbs ;
+
+LEXICON Verbs !The four verb classes in Iñapari
+        TVs ; 
+        AIV ;
+        IAIV ;
+        
+LEXICON AIV
+'achiuri Mood ;
+'achirí Mood ;
+'apɨrana Mood ;
+yana Mood ;
+tutaa Mood ;
+chipara Mood ;
+chinú Mood ;
+tɨnɨ'a Mood ;
+titu Mood ;
+pu'ata Mood ;
+pururua Mood ;
+puä Mood ;
+pɨya Mood ;
+parína Mood ;
+napɨruna Mood ;
+mau'a Mood ;
+marehɨnenipiya Mood ;
+maneta Mood ;
+yutána Mood ;
+yumaara Mood ;
+yúhɨ Mood ;
+yati Mood ;
+yatimára Mood ;
+noyatiMooda Mood ;
+ɨʔuri Mood ;
+ɨchirína Mood ;
+ɨchirihe Mood ;
+ɨta'a Mood ;
+ɨsu'uhɨra Mood ;
+ɨpuná Mood ;
+ɨpɨrá Mood ;
+ɨpɨpɨhe Mood ;
+ɨpɨ Mood ;
+ɨpataha Mood ;
+ɨ́na Mood ;
+ɨmɨti Mood ;
+ɨmɨraʔwira Mood ;
+ɨmé Mood ;
+ɨmataɨra Mood ;
+ɨ̈a Mood ;
+aβɨaβima Mood ;
+i'upititia Mood ;
+i'ataa Mood ;
+i'ana Mood ;
+ituta Mood ;
+ichi'a Mood ;
+iteyáá Mood ;
+ina Mood ;
+iiní Mood ;
+ihira Mood ;
+ɨ̈a Mood ;
+aβɨaβima Mood ;
+hɨtú Mood ;
+hirima Mood ;
+a'uti Mood ;
+a'ata Mood ;
+apunani Mood ;
+apa'atanihe'a Mood ;
+apaatahe Mood ;
+
+LEXICON IAIV
+'utereta'a Mood ;
+'utape Mood ;
+'ere'a Mood ;
+'atu'a Mood ;
+'a Mood ;
+'a Mood ;
+ya Mood ;
+waypaynsihe Mood ;
+uchi Mood ;
+upuma Mood ;
+uaátu Mood ;
+te'i Mood ;
+tei Mood ;
+sihɨ'a Mood ;
+see'a Mood ;
+rí Mood ;
+pu'anania Mood ;
+namata'a Mood ;
+yapuru Mood ;
+yahiru Mood ;
+ya Mood ;
+ɨwichi'a Mood ;
+ɨtumí Mood ;
+ɨru'a Mood ;
+ɨru Mood ;
+ɨpɨturi Mood ;
+ɨpa Mood ;
+ɨmote Mood ;
+ɨmɨ́ Mood ;
+ɨmaru Mood ;
+ipitisi'ɨra Mood ;
+inia Mood ;
+imere Mood ;
+iyutapɨ'a Mood ;
+iɨ Mood ;
+iiní Mood ;
+iinaní Mood ;
+i Mood ;
+eʔa Mood ;
+etuü'a Mood ;
+echiotahe Mood ;
+eri'a Mood ;
+a'achi'a Mood ;
+ati'areri Mood ;
+apu Mood ;
+apa'a Mood ;
+aŋ'a Mood ;
+anú Mood ;
+anu Mood ;
+anu Mood ;
+ayú Mood ;
+ába'a Mood ;
+
+LEXICON SIV
+pu'aníni'a Mood ;
+potrania Mood ;
+piture Mood ;
+panáya'ahea Mood ;
+nati Mood ;
+ma Mood ;
+ina Mood ;
+iinanima Mood ;
+amírumára Mood ;
+itu'a Mood ;
+
+LEXICON TVs! These are most of the TVs I have recorded in FLEX
+ni'a  Mood ;
+'utara'a Mood ;
+'upɨ́ɨ́ Mood ;
+'unu'a Mood ;
+'une Mood ;
+'uyari Mood ;
+'uechi Mood ;
+'a'a Mood ;
+'atara'a Mood ;
+'atapa'ä́ Mood ;
+'ata Mood ;
+'apu Mood ;
+'apata'a Mood ;
+'apahi'u Mood ;
+'ayi Mood ;
+uturu'a Mood ;
+upɨrɨ́'a Mood ;
+un'a'a Mood ;
+unu'a Mood ;
+una'arita Mood ;
+una'á Mood ;
+nuná'ama Mood ;
+nuná'amari Mood ;
+una'atiri Mood ;
+una'ariri Mood ;
+unamara Mood ;
+umeá Mood ;
+umapehera Mood ;
+tu'uti Mood ;
+tú'a Mood ;
+tu'a Mood ;
+tumi Mood ;
+tumaa Mood ;
+tyahi Mood ;
+tiná Mood ;
+tiara Mood ;
+terita'a Mood ;
+ta'a Mood ;
+putrani Mood ;
+piyä Mood ;
+páhe Mood ;
+pá Mood ;
+ni'uru'a Mood ;
+ni Mood ;
+na'a Mood ;
+mina Mood ;
+mééri'a Mood ;
+maréta Mood ;
+yu'ana Mood ;
+yu'a Mood ;
+yútáá Mood ;
+yuruä Mood ;
+yuputureta Mood ;
+yuputupira Mood ;
+yuputu Mood ;
+yuna Mood ;
+yui'are Mood ;
+yúúru Mood ;
+yawerohɨra Mood ;
+ya'ata Mood ;
+yaɨ̈ta Mood ;
+ɨ'unu'a Mood ;
+ɨ'une Mood ;
+ɨ'ahɨ Mood ;
+ɨuhi Mood ;
+ɨtɨmatara Mood ;
+ɨtare'a Mood ;
+ɨtape'a Mood ;
+ɨtahɨ Mood ;
+ɨpúhe Mood ;
+ɨpuá Mood ;
+ɨpati Mood ;
+ɨpana Mood ;
+ɨnotara Mood ;
+ɨmu'a Mood ;
+ɨmɨ̈ɨ̈́ Mood ;
+ɨmeti Mood ;
+ɨmé Mood ;
+ɨmataj̈i Mood ;
+ɨmataɨ̈hɨ Mood ;
+ɨɨ̈ra Mood ;
+ɨhɨé Mood ;
+ɨaní Mood ;
+itu'ani Mood ;
+ichipa Mood ;
+imenitehi Mood ;
+iiní'a Mood ;
+iiniina Mood ;
+ihɨmaramari Mood ;
+iara Mood ;
+i Mood ;
+hɨperira Mood ;
+híchi'á Mood ;
+hipá Mood ;
+hí Mood ;
+hana'u Mood ;
+hamapa Mood ;
+eta Mood ;
+epɨma'a Mood ;
+ehɨmurɨri Mood ;
+wenita Mood ;
+a'arapu'a Mood ;
+a'apenia Mood ;
+a'apamui'a Mood ;
+achipiputu Mood ;
+atora Mood ;
+atya Mood ;
+atí Mood ;
+ata'ahɨ Mood ;
+ari'a Mood ;
+apúúta Mood  ;
+apɨ́ Mood ;
+apa'a Mood ;
+apachí Mood ;
+aparíri Mood ;
+anina Mood ;
+ania Mood ;
+aní Mood ;
+amuritapi'a Mood ;
+ameru Mood ;
+amaná Mood ;
+ahapú Mood ;
+ába Mood ;
+imentehi Mood ;
+ati Mood ;
+
+LEXICON Mood
+ -irr:pari   Tense ;
+ -real:      Tense ;
+
+LEXICON Tense 
+-nfut.ndef: Suffixes;
+-nfut.def:ma Suffixes;
+-fut.def:he Suffixes;
+
+LEXICON Suffixes
+-1sg.obj:no # ;
+-2sg.obj:pi # ;
+-3sg.obj.m:ri # ;
+-3sg.obj.f:ru # ;
+
+! There are morphophonological changes left to figure out.
+! The verb classes are almost working. The prefixes are working, but how do I get TVs to continue past Tense but not the three IV classes? acutally the stative verbs aren't correct either since they only take suffixes and not prefixes
+! There are also a lot of ther inflectional and derivational affixes
+! Also all of the homophony

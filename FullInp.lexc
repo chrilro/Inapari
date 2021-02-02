@@ -1,0 +1,69 @@
+Multichar_Symbols
+
+LEXICON Root
+    Nouns ;
+    Verbs ;
+
+LEXICON Nouns 
+    PrefixAgr ; 
+    Nounclass ;
+
+LEXICON PrefixAgr !Not required
+        Nounclass ;
+
+LEXICON Nounclass
+        ALIEN ; 
+        INALIEN
+
+LEXICON ALIEN
+stems # ; ! alienable nouns can optionally take the prefixe agreement markers but no other morphology
+
+LEXICON INALIEN
+stems ABS ; ! Inalienable nouns can optionally take the prefixes and if they do they stop here, if they don't they continue on to the absolutive marking
+
+LEXICON ABS ! Only for unpossessed inalienable nouns
+ ti # ;
+    # ;
+
+LEXICON Verbs
+    Polarity ; ! negative vs affirmative all verb classes start with one
+
+LEXICON Polarity
+aa Verbclass ; ! optional verbal prefix indicating negative polarity
+    Verbclass ; ! absence of prefix indicating affirmative polarity
+
+LEXICON Verbclass
+    VPrefixAgr ; !Transitive, active instransitive, and inactive instransitive verbs which take prefix agreement 
+    SIV ; !Stative instransitive verbs which do not take prefix agreement
+
+LEXICON VPrefixAgr !Same as Prefix Agr
+      Preverbclasses  ;
+
+LEXICON Preverbclasses
+    TV ;
+    AIV ;
+    IAIV ;
+
+LEXICON SIV
+stems Mood ;
+
+LEXICON Mood 
+    Tense ;
+
+LEXICON Tense 
+    SuffixAgr ; ! Continue only if you are in the TV class or the SIV class
+    # ; ! optionality is only possible for TV class, SIV must have Suffixagr
+
+LEXICON SuffixAgr
+    # ;
+
+LEXICON TV 
+stems Mood ;
+
+LEXICON AIV 
+stems Mood ;
+
+LEXICON IAIV 
+stems Mood ;
+        
+

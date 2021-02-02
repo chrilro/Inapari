@@ -1,0 +1,25 @@
+LEXICON NClasses
+    Alienable ;
+    Inalienable ;
+
+LEXICON Alienable
+{AL} Prefixes ;
+
+LEXICON Inalienable
+{IAL} Prefixes ;
+
+LEXICON Prefixes
+1sg.poss-:no ALSTEMS ;
+1sg.poss-:no IALSTEMS ;
+
+LEXICON ALSTEMS
+nɨpɨro # ;
+
+LEXICON IALSTEMS
+pairi Suffix ;
+
+LEXICON Suffix
+ti # ;
+   # ;
+
+

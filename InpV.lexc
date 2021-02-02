@@ -1,0 +1,33 @@
+! This is a tranducer for verbs in Iñapari
+
+Multichar_Symbols
++1sg.subj +2sg.subj +3sg.subj +1sg.obj +2sg.obj +3sg.obj.m +3sg.obj.f +def +indef +fut +nfut +tv +act.iv +inact.iv +stat.iv
+
+LEXICON Root
+-ni'a V ;
+-'ayi V ;
+-'unu'a V ;
+-apɨ́ V ;
+-ata V ;
+-eta V ;
+-ɨtahɨ V ;
+-yuruã V ;
+-ya'ata V ;
+
+LEXICON V 
+{V}: V-tam;
+
+LEXICON V-tam
+-def.nfut:ma Person ; 
+-indef.nfut: Person ;
+-def.fut:he Person ;
+
+LEXICON Person
+-1sg.obj:no # ;
+-2sg.obj:pi # ; 
+-3sg.obj.m:ri # ;
+-3sg.obj.f:ru # ;
+
+!The hyphen on the root will be there until I figure out how to do prefixes
+!I also need to learn how to do optionality. The Bare verb stem without affixes
+!is meaningful. 
