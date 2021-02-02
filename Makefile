@@ -6,7 +6,7 @@
 # must be continued using a backslash.
 
 all : lexicon.lexc \
-	phonA.twolc \
+	phon.twolc \
 	complete.hfst \
 	gen.hfstol \
 	ana.hfstol \
@@ -16,7 +16,7 @@ all : lexicon.lexc \
 lexicon.lexc : InapariVerbs.lexc
 	cat InapariVerbs.lexc > lexicon.lexc
 
-phonA.twolc : phon.twolc
+phon.twolc : phon.twolc
 	hfst-twolc phon.twolc > phon.hfst
 
 gen.hfst : lexicon.lexc
