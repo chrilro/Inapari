@@ -13,3 +13,4 @@ for line in sys.stdin.readlines():
         print('%s [label="%s",shape=doublecircle];' % (row[0], row[0]))
 
 print('}')
+

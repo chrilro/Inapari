@@ -57,3 +57,4 @@ for lex in g:
         print('@@', lex, cont, file=sys.stderr)
         print(f'{nodes[lex]} -> {nodes[cont]} ;')
 print('}')
+
