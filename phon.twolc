@@ -1,12 +1,13 @@
 Alphabet
 
-A U I E O P B W T R H N M Ɨ CH Y ' S
-a u i e o p b w t r h n m ɨ ch y ' s
+A U I E O P B W T R H N M Ɨ CH Y ' S 
+a u i e o p b w t r h n m ɨ ch y ' s β
 
 %{NO%}:no
 %{PI%}:pi
 %{RI%}:i
 %{RU%}:ru
+%{AW%}:a
 
 ;
 
@@ -16,5 +17,5 @@ V = A E I O U Ɨ
 
 Rules
 "Change CV- into C- before V"
-[%{NO%}:n | %{PI%}:p | %{RI%}:r | %{RU%}:r ] <=> _ V ;
+[%{NO%}:n | %{PI%}:p | %{RI%}:r | %{RU%}:r | %{AB%}:aβ ] <=> _ V ;
 

@@ -10,6 +10,7 @@ Multichar_Symbols
 %{PI%}
 %{RI%}
 %{RU%}
+%{AW%}
 
 LEXICON Root ! Polarity
 neg-:aa Verbclass ;
@@ -24,7 +25,9 @@ LEXICON Prefixes
 2sg-subj-:%{PI%} Verbs ;
 3sg.subj.m-:%{RI%} Verbs ;
 3sg.subj.f-:%{RU%} Verbs ;
-                   Verbs ; 
+1pl.subj-:%{AW%} Verbs ;
+2/3pl.subj-:i Verbs ;
+              Verbs ; 
 
 LEXICON Verbs !The four verb classes in Iñapari
         TVs ; 
