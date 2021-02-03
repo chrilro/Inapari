@@ -15,11 +15,11 @@ LEXICON Verbclass ! The two basic types of verbs prefixing and non-prefixing
         
 LEXICON VPrefixAgr 
 1sg.subj-:%{NO%} Preverbclasses ;
-2sg-subj-:%{PI%} Preverbclasses ;
+2sg.subj-:%{PI%} Preverbclasses ;
 3sg.subj.m-:%{RI%} Preverbclasses ;
 3sg.subj.f-:%{RU%} Preverbclasses ;
 1pl.subj-:%{AW%} Preverbclasses ;
-2/3pl.subj-:i Preverbclasses ;
+2/3pl.subj-:i- Preverbclasses ;
               Preverbclasses ; 
 
 LEXICON Preverbclasses !The four verb classes in Iñapari

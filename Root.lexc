@@ -1,6 +1,11 @@
 Multichar_Symbols
-1sg.subj- 2sg-subj- 3sg.subj.m- 3sg.subj.f- -nfut.ndef -nfut.def -fut.def -3sg.obj.m
--3sg.obj.f -1sg.obj -2sg.obj -irr -real
+1sg.subj- 2sg.subj- 3sg.subj.m- 3sg.subj.f- 1pl.subj- 2/3pl.subj- -nfut.ndef -nfut.def -fut.def -3sg.obj.m
+-3sg.obj.f -1sg.obj -2sg.obj -irr -real 
+
+1sg.poss- 2sg.poss- 3sg.poss.m- 3sg.poss.f- 1pl.poss- 2/3pl.poss- -abs
+
+@U.PREFIX.YES@
+@U.PREFIX.NO@
 
 %{NO%}
 %{PI%}
