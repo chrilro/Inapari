@@ -1,0 +1,17 @@
+
+LEXICON Nouns 
+    PrefixAgr ; 
+    Nounclass ;
+
+LEXICON PrefixAgr
+1sg.subj-:%{NO%} Nounclasses ;
+2sg-subj-:%{PI%} Nounclasses ;
+3sg.subj.m-:%{RI%} Nounclasses ;
+3sg.subj.f-:%{RU%} Nounclasses ;
+1pl.subj-:%{AW%} Nounclasses ;
+2/3pl.subj-:i Nounclasses ;
+              Nounclasses ;
+
+LEXICON Nounclasses
+        AlienN ; 
+        InalienN ;

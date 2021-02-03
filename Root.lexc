@@ -1,0 +1,13 @@
+Multichar_Symbols
+1sg.subj- 2sg-subj- 3sg.subj.m- 3sg.subj.f- -nfut.ndef -nfut.def -fut.def -3sg.obj.m
+-3sg.obj.f -1sg.obj -2sg.obj -irr -real
+
+%{NO%}
+%{PI%}
+%{RI%}
+%{RU%}
+%{AW%}
+
+LEXICON Root
+    Nouns ;
+    Verbs ;

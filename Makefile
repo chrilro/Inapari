@@ -5,16 +5,27 @@
 # If the dependencies or recipe need to take up more than one line, the line
 # must be continued using a backslash.
 
-all : lexicon.lexc \
+# The ana.png file breaks since no image can fit inside of it. So I commented that out.
+
+all : verbs.lexc \
+	nouns.lexc \
+	lexicon.lexc \
 	phon.hfst \
 	complete.hfst \
 	gen.hfstol \
 	ana.hfstol \
-	ana.png \
 	lexicon.png
+	#ana.png 
+	
 
-lexicon.lexc : InapariVerbs.lexc
-	cat InapariVerbs.lexc > lexicon.lexc
+verbs.lexc : Verbs_template.lexc SIV.lexc TV.lexc AIV.lexc IAIV.lexc
+	cat Verbs_template.lexc SIV.lexc TV.lexc AIV.lexc IAIV.lexc > verbs.lexc
+
+nouns.lexc : Nouns_template.lexc Alien_nouns.lexc Inalien_nouns.lexc
+	cat Nouns_template.lexc Alien_nouns.lexc Inalien_nouns.lexc > nouns.lexc
+
+lexicon.lexc : Root.lexc verbs.lexc nouns.lexc  
+	cat Root.lexc verbs.lexc nouns.lexc > lexicon.lexc
 
 phon.hfst : phon.twolc
 	hfst-twolc phon.twolc > phon.hfst
@@ -34,8 +45,8 @@ ana.hfst : complete.hfst
 ana.hfstol : ana.hfst
 	hfst-fst2fst --optimized-lookup-unweighted -i ana.hfst -o ana.hfstol
 
-ana.png : ana.hfstol
-	hfst-fst2txt ana.hfstol | python3 att2dot.py | dot -T png -o ana.png
+#ana.png : ana.hfstol
+#	hfst-fst2txt ana.hfstol | python3 att2dot.py | dot -T png -o ana.png
 
 lexicon.png : lexicon.lexc
 	python3 lexc2dot.py < lexicon.lexc | dot -T png -o lexicon.png
