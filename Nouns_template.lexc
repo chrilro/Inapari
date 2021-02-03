@@ -10,7 +10,8 @@ LEXICON PrefixAgr
 3sg.poss.f-:%{RU%} Prefixtag ;
 1pl.poss-:%{AW%} Prefixtag ;
 2/3pl.poss-:i- Prefixtag ;
-              Nounclasses ;
+              Nounclasses ; ! Is this one necessary? 
+! I should include a new tag LEXICON that adds possession later, that way I can use the same agreement markers for V and N without losing their functional distinctions. 
 
 LEXICON Prefixtag
 @U.PREFIX.YES@ Nounclasses ;
