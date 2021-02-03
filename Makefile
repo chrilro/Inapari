@@ -16,7 +16,6 @@ all : verbs.lexc \
 	ana.hfstol \
 	lexicon.png
 	#ana.png 
-	
 
 verbs.lexc : Verbs_template.lexc SIV.lexc TV.lexc AIV.lexc IAIV.lexc
 	cat Verbs_template.lexc SIV.lexc TV.lexc AIV.lexc IAIV.lexc > verbs.lexc
