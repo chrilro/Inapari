@@ -1,0 +1,24 @@
+
+LEXICON SuffixAgr
+-1sg:-no Suffixtag ;
+-2sg:-pi Suffixtag ;
+-3sg.m:-ri Suffixtag ;
+-3sg.f:-ru Suffixtag ;
+-1/2pl:-i Suffixtag ;
+-3pl.m:-ri-na Suffixtag ;
+-3pl.f:-ru-na Suffixtag ;
+@U.SUFFIX.NO@ # ;
+
+LEXICON Suffixtag
+@U.SUFFIX.YES@ Suffixfunction ;
+ 
+LEXICON Suffixfunction
+@U.TV.YES@ Suffobj ;
+@U.SIV.YES@ Suffsubj ;
+
+LEXICON Suffobj
+.obj:0 # ;
+
+LEXICON Suffsubj
+.subj:0 # ;
+

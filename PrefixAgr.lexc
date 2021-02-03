@@ -1,0 +1,21 @@
+
+LEXICON PrefixAgr
+1sg:%{NO%-%} Prefixtag ;
+2sg:%{PI%-%} Prefixtag ;
+3sg:%{RI%-%} Prefixtag ;
+3sg:%{RU%-%} Prefixtag ;
+1pl:%{AW%-%} Prefixtag ;
+2/3pl:i- Prefixtag ;
+        
+LEXICON Prefixtag
+@U.PREFIX.YES@ Prefixfunction ;
+
+LEXICON Prefixfunction
+.poss-:0 Nountag ;
+.subj-:0 Verbtag ;
+
+LEXICON Nountag
+@U.POLARITY.NO@ Nounclasses ;
+
+LEXICON Verbtag
+@U.POLARITY.YES@ Preverbclasses ;

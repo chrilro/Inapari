@@ -6,8 +6,12 @@ LEXICON Verbs
         Polarity ;
 
 LEXICON Polarity
-neg-:aa- Verbclass ;
-        Verbclass ;
+neg-:aa- PolarityTag ;
+aff-:0   PolarityTag ;
+
+LEXICON PolarityTag
+@U.POLARITY.YES@ Verbclass ;
+
 
 LEXICON Verbclass ! The two basic types of verbs prefixing and non-prefixing
         PrefixAgr ;
