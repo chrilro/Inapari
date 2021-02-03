@@ -1,22 +1,36 @@
 Multichar_Symbols
-1sg.subj- 2sg.subj- 3sg.subj.m- 3sg.subj.f- 1pl.subj- 2/3pl.subj- -nfut.ndef -nfut.def -fut.def -3sg.obj.m
--3sg.obj.f -1sg.obj -2sg.obj -irr -real 
+-nfut.ndef -nfut.def -fut.def -3sg.obj.m -3sg.obj.f -1sg.obj -2sg.obj -irr -real 
 
-1sg.poss- 2sg.poss- 3sg.poss.m- 3sg.poss.f- 1pl.poss- 2/3pl.poss- -abs
+1sg 2sg 3sg 3sg 1pl 2/3pl .poss- .subj- .obj -abs
 
 @U.PREFIX.YES@
 @U.PREFIX.NO@
+@U.SIV.YES@ 
 
-%{NO%}
-%{PI%}
-%{RI%}
-%{RU%}
-%{AW%}
+%{NO%-%}
+%{PI%-%}
+%{RI%-%}
+%{RU%-%}
+%{AW%-%}
 
 LEXICON Root
     Nouns ;
     Verbs ;
-!This is the FST for Iñapari verbs. This represents syntagmatic properties of word formation by dividing the syntagemes in blocks. The blocks
+
+LEXICON PrefixAgr
+1sg:%{NO%-%} Prefixtag ;
+2sg:%{PI%-%} Prefixtag ;
+3sg:%{RI%-%} Prefixtag ;
+3sg:%{RU%-%} Prefixtag ;
+1pl:%{AW%-%} Prefixtag ;
+2/3pl:i- Prefixtag ;
+        
+LEXICON Prefixtag
+@U.PREFIX.YES@ Prefixfunction ;
+
+LEXICON Prefixfunction
+.poss-:0 Nounclasses ;
+.subj-:0 Preverbclasses ;!This is the FST for Iñapari verbs. This represents syntagmatic properties of word formation by dividing the syntagemes in blocks. The blocks
 !called LEXICON represent the paradigmatic elements. So you read it top to bottom left to right.
 !This file produce 22656 unique sentences in the language. 
 
@@ -24,196 +38,176 @@ LEXICON Verbs
         Polarity ;
 
 LEXICON Polarity
-neg-:aa Verbclass ;
+neg-:aa- Verbclass ;
         Verbclass ;
 
 LEXICON Verbclass ! The two basic types of verbs prefixing and non-prefixing
-        VPrefixAgr ;
+        PrefixAgr ;
         SIV ;
+        Preverbclasses ;
         
-LEXICON VPrefixAgr 
-1sg.subj-:%{NO%} Preverbclasses ;
-2sg.subj-:%{PI%} Preverbclasses ;
-3sg.subj.m-:%{RI%} Preverbclasses ;
-3sg.subj.f-:%{RU%} Preverbclasses ;
-1pl.subj-:%{AW%} Preverbclasses ;
-2/3pl.subj-:i- Preverbclasses ;
-              Preverbclasses ; 
-
 LEXICON Preverbclasses !The four verb classes in Iñapari
         TVs ; 
         AIV ;
         IAIV ;
         
 LEXICON Mood
- -irr:pari   Tense ;
+ -irr:-pari   Tense ;
  -real:      Tense ;
 
 LEXICON Tense 
--nfut.ndef: # ;
--nfut.def:ma # ;
--fut.def:he # ;
-
-LEXICON SuffMood
- -irr:pari   SuffTense ;
- -real:      SuffTense ;
-
-LEXICON SuffTense 
--nfut.ndef: Suffixes;
--nfut.def:ma Suffixes;
--fut.def:he Suffixes;
-
-LEXICON Suffixes
--1sg.obj:no # ;
--2sg.obj:pi # ;
--3sg.obj.m:ri # ;
--3sg.obj.f:ru # ;
+-nfut.ndef: SuffixAgr ;
+-nfut.def:-ma SuffixAgr;
+-fut.def:-he SuffixAgr ;
 
 ! The verb classes are almost working. The prefixes are working, but how do I get TVs to continue past Tense but not the three IV classes? acutally the stative verbs aren't correct either since they only take suffixes and not prefixes
 ! There are also a lot of ther inflectional and derivational affixes
 ! Also all of the homophony!This is the FST for Iñapari stative intransitive verbs.      
 
 LEXICON SIV
-pu'aníni'a SuffMood ;
-potrania SuffMood ;
-piture SuffMood ;
-panáya'ahea SuffMood ;
-nati SuffMood ;
-ma SuffMood ;
-ina SuffMood ;
-iinanima SuffMood ;
-amírumára SuffMood ;
-itu'a SuffMood ;
+pu'aníni'a SIVtag ;
+potrania SIVtag ;
+piture SIVtag ;
+panáya'ahea SIVtag ;
+nati SIVtag ;
+ma SIVtag ;
+ina SIVtag ;
+iinanima SIVtag ;
+amírumára SIVtag ;
+itu'a SIVtag ;
+
+LEXICON SIVtag
+@U.SIV.YES@ Mood ;
 
 
 !This is the FST for Iñapari transitive verbs.      
 
 LEXICON TVs
-ni'a  SuffMood ;
-'utara'a SuffMood ;
-'upɨ́ɨ́ SuffMood ;
-'unu'a SuffMood ;
-'une SuffMood ;
-'uyari SuffMood ;
-'uechi SuffMood ;
-'a'a SuffMood ;
-'atara'a SuffMood ;
-'atapa'ä́ SuffMood ;
-'ata SuffMood ;
-'apu SuffMood ;
-'apata'a SuffMood ;
-'apahi'u SuffMood ;
-'ayi SuffMood ;
-uturu'a SuffMood ;
-upɨrɨ́'a SuffMood ;
-un'a'a SuffMood ;
-unu'a SuffMood ;
-una'arita SuffMood ;
-una'á SuffMood ;
-nuná'ama SuffMood ;
-nuná'amari SuffMood ;
-una'atiri SuffMood ;
-una'ariri SuffMood ;
-unamara SuffMood ;
-umeá SuffMood ;
-umapehera SuffMood ;
-tu'uti SuffMood ;
-tú'a SuffMood ;
-tu'a SuffMood ;
-tumi SuffMood ;
-tumaa SuffMood ;
-tyahi SuffMood ;
-tiná SuffMood ;
-tiara SuffMood ;
-terita'a SuffMood ;
-ta'a SuffMood ;
-putrani SuffMood ;
-piyä SuffMood ;
-páhe SuffMood ;
-pá SuffMood ;
-ni'uru'a SuffMood ;
-ni SuffMood ;
-na'a SuffMood ;
-mina SuffMood ;
-mééri'a SuffMood ;
-maréta SuffMood ;
-yu'ana SuffMood ;
-yu'a SuffMood ;
-yútáá SuffMood ;
-yuruä SuffMood ;
-yuputureta SuffMood ;
-yuputupira SuffMood ;
-yuputu SuffMood ;
-yuna SuffMood ;
-yui'are SuffMood ;
-yúúru SuffMood ;
-yawerohɨra SuffMood ;
-ya'ata SuffMood ;
-yaɨ̈ta SuffMood ;
-ɨ'unu'a SuffMood ;
-ɨ'une SuffMood ;
-ɨ'ahɨ SuffMood ;
-ɨuhi SuffMood ;
-ɨtɨmatara SuffMood ;
-ɨtare'a SuffMood ;
-ɨtape'a SuffMood ;
-ɨtahɨ SuffMood ;
-ɨpúhe SuffMood ;
-ɨpuá SuffMood ;
-ɨpati SuffMood ;
-ɨpana SuffMood ;
-ɨnotara SuffMood ;
-ɨmu'a SuffMood ;
-ɨmɨ̈ɨ̈́ SuffMood ;
-ɨmeti SuffMood ;
-ɨmé SuffMood ;
-ɨmataj̈i SuffMood ;
-ɨmataɨ̈hɨ SuffMood ;
-ɨɨ̈ra SuffMood ;
-ɨhɨé SuffMood ;
-ɨaní SuffMood ;
-itu'ani SuffMood ;
-ichipa SuffMood ;
-imenitehi SuffMood ;
-iiní'a SuffMood ;
-iiniina SuffMood ;
-ihɨmaramari SuffMood ;
-iara SuffMood ;
-i SuffMood ;
-hɨperira SuffMood ;
-híchi'á SuffMood ;
-hipá SuffMood ;
-hí SuffMood ;
-hana'u SuffMood ;
-hamapa SuffMood ;
-eta SuffMood ;
-epɨma'a SuffMood ;
-ehɨmurɨri SuffMood ;
-wenita SuffMood ;
-a'arapu'a SuffMood ;
-a'apenia SuffMood ;
-a'apamui'a SuffMood ;
-achipiputu SuffMood ;
-atora SuffMood ;
-atya SuffMood ;
-atí SuffMood ;
-ata'ahɨ SuffMood ;
-ari'a SuffMood ;
-apúúta SuffMood  ;
-apɨ́ SuffMood ;
-apa'a SuffMood ;
-apachí SuffMood ;
-aparíri SuffMood ;
-anina SuffMood ;
-ania SuffMood ;
-aní SuffMood ;
-amuritapi'a SuffMood ;
-ameru SuffMood ;
-amaná SuffMood ;
-ahapú SuffMood ;
-ába SuffMood ;
-imentehi SuffMood ;
-ati SuffMood ;
+ni'a  Mood ;
+'utara'a Mood ;
+'upɨ́ɨ́ Mood ;
+'unu'a Mood ;
+'une Mood ;
+'uyari Mood ;
+'uechi Mood ;
+'a'a Mood ;
+'atara'a Mood ;
+'atapa'ä́ Mood ;
+'ata Mood ;
+'apu Mood ;
+'apata'a Mood ;
+'apahi'u Mood ;
+'ayi Mood ;
+uturu'a Mood ;
+upɨrɨ́'a Mood ;
+un'a'a Mood ;
+unu'a Mood ;
+una'arita Mood ;
+una'á Mood ;
+nuná'ama Mood ;
+nuná'amari Mood ;
+una'atiri Mood ;
+una'ariri Mood ;
+unamara Mood ;
+umeá Mood ;
+umapehera Mood ;
+tu'uti Mood ;
+tú'a Mood ;
+tu'a Mood ;
+tumi Mood ;
+tumaa Mood ;
+tyahi Mood ;
+tiná Mood ;
+tiara Mood ;
+terita'a Mood ;
+ta'a Mood ;
+putrani Mood ;
+piyä Mood ;
+páhe Mood ;
+pá Mood ;
+ni'uru'a Mood ;
+ni Mood ;
+na'a Mood ;
+mina Mood ;
+mééri'a Mood ;
+maréta Mood ;
+yu'ana Mood ;
+yu'a Mood ;
+yútáá Mood ;
+yuruä Mood ;
+yuputureta Mood ;
+yuputupira Mood ;
+yuputu Mood ;
+yuna Mood ;
+yui'are Mood ;
+yúúru Mood ;
+yawerohɨra Mood ;
+ya'ata Mood ;
+yaɨ̈ta Mood ;
+ɨ'unu'a Mood ;
+ɨ'une Mood ;
+ɨ'ahɨ Mood ;
+ɨuhi Mood ;
+ɨtɨmatara Mood ;
+ɨtare'a Mood ;
+ɨtape'a Mood ;
+ɨtahɨ Mood ;
+ɨpúhe Mood ;
+ɨpuá Mood ;
+ɨpati Mood ;
+ɨpana Mood ;
+ɨnotara Mood ;
+ɨmu'a Mood ;
+ɨmɨ̈ɨ̈́ Mood ;
+ɨmeti Mood ;
+ɨmé Mood ;
+ɨmataj̈i Mood ;
+ɨmataɨ̈hɨ Mood ;
+ɨɨ̈ra Mood ;
+ɨhɨé Mood ;
+ɨaní Mood ;
+itu'ani Mood ;
+ichipa Mood ;
+imenitehi Mood ;
+iiní'a Mood ;
+iiniina Mood ;
+ihɨmaramari Mood ;
+iara Mood ;
+i Mood ;
+hɨperira Mood ;
+híchi'á Mood ;
+hipá Mood ;
+hí Mood ;
+hana'u Mood ;
+hamapa Mood ;
+eta Mood ;
+epɨma'a Mood ;
+ehɨmurɨri Mood ;
+wenita Mood ;
+a'arapu'a Mood ;
+a'apenia Mood ;
+a'apamui'a Mood ;
+achipiputu Mood ;
+atora Mood ;
+atya Mood ;
+atí Mood ;
+ata'ahɨ Mood ;
+ari'a Mood ;
+apúúta Mood  ;
+apɨ́ Mood ;
+apa'a Mood ;
+apachí Mood ;
+aparíri Mood ;
+anina Mood ;
+ania Mood ;
+aní Mood ;
+amuritapi'a Mood ;
+ameru Mood ;
+amaná Mood ;
+ahapú Mood ;
+ába Mood ;
+imentehi Mood ;
+ati Mood ;
 !This is the FST for Iñapari active intransitive verbs.      
 
 LEXICON AIV
@@ -337,18 +331,6 @@ ayú Mood ;
 LEXICON Nouns 
     PrefixAgr ; 
     Nounclasses ;
-
-LEXICON PrefixAgr
-1sg.poss-:%{NO%} Prefixtag ;
-2sg.poss-:%{PI%} Prefixtag ;
-3sg.poss.m-:%{RI%} Prefixtag ;
-3sg.poss.f-:%{RU%} Prefixtag ;
-1pl.poss-:%{AW%} Prefixtag ;
-2/3pl.poss-:i- Prefixtag ;
-              Nounclasses ;
-
-LEXICON Prefixtag
-@U.PREFIX.YES@ Nounclasses ;
 
 LEXICON Nounclasses
         AlienN ; 
@@ -848,8 +830,25 @@ yuhɨ Abs ;
 yurunú Abs ;
 
 LEXICON Abs ! Only for unpossessed inalienable nouns
- -abs:-ti Untag ;
+ -abs:-ti Possessioncheck ;
 # ;
 
-LEXICON Untag
+LEXICON Possessioncheck
 @U.PREFIX.NO@ # ;
+LEXICON SuffixAgr
+-1sg Suffixtag ;
+-2sg Suffixtag ;
+-3sg Suffixtag ;
+-3sg Suffixtag ;
+-1pl Suffixtag ;
+-2/3pl Suffixtag ;
+
+LEXICON Suffixtag
+@U.SUFFIX.YES@ Verbclasscheck ;
+
+LEXICON Verbclasscheck 
+    Suffixfunction ;
+
+LEXICON Suffixfunction
+.obj # ;
+.subj- # ;

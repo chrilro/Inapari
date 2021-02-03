@@ -3,18 +3,6 @@ LEXICON Nouns
     PrefixAgr ; 
     Nounclasses ;
 
-LEXICON PrefixAgr
-1sg.poss-:%{NO%} Prefixtag ;
-2sg.poss-:%{PI%} Prefixtag ;
-3sg.poss.m-:%{RI%} Prefixtag ;
-3sg.poss.f-:%{RU%} Prefixtag ;
-1pl.poss-:%{AW%} Prefixtag ;
-2/3pl.poss-:i- Prefixtag ;
-              Nounclasses ;
-
-LEXICON Prefixtag
-@U.PREFIX.YES@ Nounclasses ;
-
 LEXICON Nounclasses
         AlienN ; 
         InalienN ;
@@ -513,8 +501,8 @@ yuhɨ Abs ;
 yurunú Abs ;
 
 LEXICON Abs ! Only for unpossessed inalienable nouns
- -abs:-ti Untag ;
+ -abs:-ti Possessioncheck ;
 # ;
 
-LEXICON Untag
+LEXICON Possessioncheck
 @U.PREFIX.NO@ # ;

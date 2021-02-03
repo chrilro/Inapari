@@ -1,15 +1,18 @@
 !This is the FST for Iñapari stative intransitive verbs.      
 
 LEXICON SIV
-pu'aníni'a SuffMood ;
-potrania SuffMood ;
-piture SuffMood ;
-panáya'ahea SuffMood ;
-nati SuffMood ;
-ma SuffMood ;
-ina SuffMood ;
-iinanima SuffMood ;
-amírumára SuffMood ;
-itu'a SuffMood ;
+pu'aníni'a SIVtag ;
+potrania SIVtag ;
+piture SIVtag ;
+panáya'ahea SIVtag ;
+nati SIVtag ;
+ma SIVtag ;
+ina SIVtag ;
+iinanima SIVtag ;
+amírumára SIVtag ;
+itu'a SIVtag ;
+
+LEXICON SIVtag
+@U.SIV.YES@ Mood ;
 
 

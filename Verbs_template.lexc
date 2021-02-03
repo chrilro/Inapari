@@ -6,50 +6,27 @@ LEXICON Verbs
         Polarity ;
 
 LEXICON Polarity
-neg-:aa Verbclass ;
+neg-:aa- Verbclass ;
         Verbclass ;
 
 LEXICON Verbclass ! The two basic types of verbs prefixing and non-prefixing
-        VPrefixAgr ;
+        PrefixAgr ;
         SIV ;
+        Preverbclasses ;
         
-LEXICON VPrefixAgr 
-1sg.subj-:%{NO%} Preverbclasses ;
-2sg.subj-:%{PI%} Preverbclasses ;
-3sg.subj.m-:%{RI%} Preverbclasses ;
-3sg.subj.f-:%{RU%} Preverbclasses ;
-1pl.subj-:%{AW%} Preverbclasses ;
-2/3pl.subj-:i- Preverbclasses ;
-              Preverbclasses ; 
-
 LEXICON Preverbclasses !The four verb classes in Iñapari
         TVs ; 
         AIV ;
         IAIV ;
         
 LEXICON Mood
- -irr:pari   Tense ;
+ -irr:-pari   Tense ;
  -real:      Tense ;
 
 LEXICON Tense 
--nfut.ndef: # ;
--nfut.def:ma # ;
--fut.def:he # ;
-
-LEXICON SuffMood
- -irr:pari   SuffTense ;
- -real:      SuffTense ;
-
-LEXICON SuffTense 
--nfut.ndef: Suffixes;
--nfut.def:ma Suffixes;
--fut.def:he Suffixes;
-
-LEXICON Suffixes
--1sg.obj:no # ;
--2sg.obj:pi # ;
--3sg.obj.m:ri # ;
--3sg.obj.f:ru # ;
+-nfut.ndef: SuffixAgr ;
+-nfut.def:-ma SuffixAgr;
+-fut.def:-he SuffixAgr ;
 
 ! The verb classes are almost working. The prefixes are working, but how do I get TVs to continue past Tense but not the three IV classes? acutally the stative verbs aren't correct either since they only take suffixes and not prefixes
 ! There are also a lot of ther inflectional and derivational affixes

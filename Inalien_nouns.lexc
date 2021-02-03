@@ -174,8 +174,8 @@ yuhɨ Abs ;
 yurunú Abs ;
 
 LEXICON Abs ! Only for unpossessed inalienable nouns
- -abs:-ti Untag ;
+ -abs:-ti Possessioncheck ;
 # ;
 
-LEXICON Untag
+LEXICON Possessioncheck
 @U.PREFIX.NO@ # ;

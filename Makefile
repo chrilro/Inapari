@@ -23,8 +23,8 @@ verbs.lexc : Verbs_template.lexc SIV.lexc TV.lexc AIV.lexc IAIV.lexc
 nouns.lexc : Nouns_template.lexc Alien_nouns.lexc Inalien_nouns.lexc
 	cat Nouns_template.lexc Alien_nouns.lexc Inalien_nouns.lexc > nouns.lexc
 
-lexicon.lexc : Root.lexc verbs.lexc nouns.lexc  
-	cat Root.lexc verbs.lexc nouns.lexc > lexicon.lexc
+lexicon.lexc : Root.lexc verbs.lexc nouns.lexc PrefixAgr.lexc SuffixAgr.lexc
+	cat Root.lexc PrefixAgr.lexc verbs.lexc nouns.lexc SuffixAgr.lexc > lexicon.lexc
 
 phon.hfst : phon.twolc
 	hfst-twolc phon.twolc > phon.hfst
