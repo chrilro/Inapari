@@ -872,12 +872,6 @@ LEXICON Suffixtag
 @U.SUFFIX.YES@ Suffixfunction ;
  
 LEXICON Suffixfunction
-@U.TV.YES@ Suffobj ;
-@U.SIV.YES@ Suffsubj ;
-
-LEXICON Suffobj
 .obj:0 # ;
-
-LEXICON Suffsubj
 .subj:0 # ;
 
