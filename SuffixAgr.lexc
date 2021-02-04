@@ -13,6 +13,11 @@ LEXICON Suffixtag
 @U.SUFFIX.YES@ Suffixfunction ;
  
 LEXICON Suffixfunction
-.obj:0 # ;
-.subj:0 # ;
+.obj:0 SIVcheck ;
+.subj:0 TVcheck ;
 
+LEXICON SIVcheck
+@U.SIV.NO@ #; 
+
+LEXICON TVcheck
+@U.TV.NO@ # ;
