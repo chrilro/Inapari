@@ -1,7 +1,9 @@
 Multichar_Symbols
 -nfut.ndef -nfut.def -fut.def -3sg.obj.m -3sg.obj.f -1sg.obj -2sg.obj -irr -real 
 
-1sg 2sg 3sg 3sg 1pl 2/3pl .poss- .subj .obj -abs .subj-
+1sg 2sg 3sg.m 3sg.f 1pl 2/3pl .poss- .subj .obj -abs .subj-
+
+-ti
 
 @U.PREFIX.YES@
 @U.PREFIX.NO@

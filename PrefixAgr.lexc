@@ -2,8 +2,8 @@
 LEXICON PrefixAgr
 1sg:%{NO%-%} Prefixtag ;
 2sg:%{PI%-%} Prefixtag ;
-3sg:%{RI%-%} Prefixtag ;
-3sg:%{RU%-%} Prefixtag ;
+3sg.f:%{RI%-%} Prefixtag ;
+3sg.m:%{RU%-%} Prefixtag ;
 1pl:%{AW%-%} Prefixtag ;
 2/3pl:i- Prefixtag ;
         

@@ -1,7 +1,9 @@
 Multichar_Symbols
 -nfut.ndef -nfut.def -fut.def -3sg.obj.m -3sg.obj.f -1sg.obj -2sg.obj -irr -real 
 
-1sg 2sg 3sg 3sg 1pl 2/3pl .poss- .subj .obj -abs .subj-
+1sg 2sg 3sg.m 3sg.f 1pl 2/3pl .poss- .subj .obj -abs .subj-
+
+-ti
 
 @U.PREFIX.YES@
 @U.PREFIX.NO@
@@ -29,8 +31,8 @@ LEXICON Root
 LEXICON PrefixAgr
 1sg:%{NO%-%} Prefixtag ;
 2sg:%{PI%-%} Prefixtag ;
-3sg:%{RI%-%} Prefixtag ;
-3sg:%{RU%-%} Prefixtag ;
+3sg.f:%{RI%-%} Prefixtag ;
+3sg.m:%{RU%-%} Prefixtag ;
 1pl:%{AW%-%} Prefixtag ;
 2/3pl:i- Prefixtag ;
         
@@ -854,11 +856,9 @@ yuhɨ Abs ;
 yurunú Abs ;
 
 LEXICON Abs ! Only for unpossessed inalienable nouns
- -abs:-ti Possessioncheck ;
-# ;
+@U.PREFIX.NO@-abs:@U.PREFIX.NO@-ti # ;
+@U.PREFIX.YES@ # ;
 
-LEXICON Possessioncheck
-@U.PREFIX.NO@ # ;
 LEXICON SuffixAgr
 -1sg:-no Suffixtag ;
 -2sg:-pi Suffixtag ;
@@ -873,11 +873,5 @@ LEXICON Suffixtag
 @U.SUFFIX.YES@ Suffixfunction ;
  
 LEXICON Suffixfunction
-.obj:0 SIVcheck ;
-.subj:0 TVcheck ;
-
-LEXICON SIVcheck
-@U.SIV.NO@ #; 
-
-LEXICON TVcheck
-@U.TV.NO@ # ;
+@U.SIV.NO@.obj:@U.SIV.NO@ # ;
+@U.TV.NO@.subj:@U.TV.NO@ # ;
