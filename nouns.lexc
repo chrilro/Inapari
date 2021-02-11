@@ -501,8 +501,5 @@ yuhɨ Abs ;
 yurunú Abs ;
 
 LEXICON Abs ! Only for unpossessed inalienable nouns
- -abs:-ti Possessioncheck ;
-# ;
-
-LEXICON Possessioncheck
-@U.PREFIX.NO@ # ;
+@U.PREFIX.NO@-abs:@U.PREFIX.NO@-ti # ;
+@U.PREFIX.YES@ # ;
