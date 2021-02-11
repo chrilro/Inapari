@@ -25,6 +25,26 @@ Multichar_Symbols
 LEXICON Root
     Nouns ;
     Verbs ;
+    Particles ;
+
+! List of Iñapari particles
+
+LEXICON Particles
+a'aimani # ;
+ahamá # ;
+ahamátu # ;
+ahamátua # ;
+aníma # ;
+apua # ;
+a'ahahama # ;
+haywáy'uy # ;
+ha'aynani # ;
+hɨra # ;
+itapun # ;
+mahɨ'anipa # ;
+pumaymí # ;
+tama # ;
+
 
 LEXICON PrefixAgr
 1sg:%{NO%-%} Prefixtag ;
